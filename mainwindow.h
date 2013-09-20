@@ -3,9 +3,8 @@
 
 #include <QMainWindow>
 
-namespace Ui {
-class MainWindow;
-}
+#include "ui_main.h"
+#include "ui_login.h"
 
 class MainWindow : public QMainWindow
 {
@@ -16,7 +15,12 @@ public:
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::loginWindow *loginUi;
+    Ui::mainWindow  *mainUi;
+
+public slots:
+    void openForm();
+    void closeForm();
 };
 
 #endif // MAINWINDOW_H
