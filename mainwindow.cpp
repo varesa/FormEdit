@@ -1,4 +1,5 @@
 #include <QDebug>
+#include <QDir>
 
 #include "mainwindow.h"
 #include "ui_login.h"
@@ -30,7 +31,11 @@ void MainWindow::openForm() {
     mainUi = new Ui::mainWindow();
     mainUi->setupUi(mainWidget);
 
-    mainUi->webView->setUrl(QUrl("http://www.google.fi/"));
+    //mainUi->webView->setUrl(QUrl("http://www.google.fi/"));
+    QUrl location = QUrl::fromLocalFile("lomake_placeholder.html");
+    qDebug() << QDir::currentPath();
+    qDebug() << location.path();
+    mainUi->webView->setUrl("file://" + QDir::currentPath() + "/lomake_placeholder.html");
 
     QPalette palette = QPalette();
     palette.setColor(QPalette::Background, Qt::red);
