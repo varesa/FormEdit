@@ -19,4 +19,5 @@ HEADERS  += mainwindow.h
 
 FORMS    += \
     main.ui \
-    login.ui
+    login.ui \
+    takepicture.ui
