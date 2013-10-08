@@ -470,7 +470,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="takepictureButton">
        <property name="text">
         <string>Vaihda kuva</string>
        </property>
@@ -517,7 +517,7 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QWebView" name="webView">
+      <widget class="QWebView" name="webView" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
          <horstretch>0</horstretch>
@@ -530,7 +530,7 @@
          <height>200</height>
         </size>
        </property>
-       <property name="url">
+       <property name="url" stdset="0">
         <url>
          <string>about:blank</string>
         </url>
